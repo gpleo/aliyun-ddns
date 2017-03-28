@@ -76,7 +76,7 @@ const updateRecord = (target, callback) => {
             path: alidns.getPath(updateParmas)
           }, res => {
             if (res.statusCode === 200) {
-              callback('updated');
+              callback('ip:' + target.ip);
             } else {
               callback('error');
             }
@@ -88,7 +88,7 @@ const updateRecord = (target, callback) => {
             path: alidns.getPath(addParmas)
           }, res => {
             if (res.statusCode === 200) {
-              callback('added');
+              callback('ip:' + target.ip);
             } else {
               callback('error');
             }
